@@ -1,13 +1,12 @@
 ﻿@page "/"
 
-
-
 <div class="question-container">
-    QUESTION
+    @Question.Text
 </div>
 
 <div class="answer-container">
-    <button>Button 1</button>
-    <button>Button 2</button>
-    <button>Button 3</button>
+
+    @foreach (var answer in Question.Answers) {
+        <button>@answer.Text</button>
+    }
 </div>

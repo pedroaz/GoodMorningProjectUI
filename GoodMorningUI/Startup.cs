@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GoodMorningUI.Core.Factories;
+using GoodMorningUI.Core.Narrative;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
@@ -27,6 +29,8 @@ namespace GoodMorningUI
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddSingleton<IQuestionFactory, QuestionFactory>();
+            services.AddSingleton<INarrativeManager, NarrativeManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
