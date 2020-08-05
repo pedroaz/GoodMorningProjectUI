@@ -9,5 +9,6 @@ namespace GoodMorningUI.Core.Narrative
     public interface INarrativeManager
     {
         public Question GetFirstQuestion();
+        public Question GetQuestionById(QuestionId id);
     }
 }

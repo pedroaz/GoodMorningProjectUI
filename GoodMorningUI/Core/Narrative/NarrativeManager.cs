@@ -21,7 +21,12 @@ namespace GoodMorningUI.Core.Narrative
 
         public Question GetFirstQuestion()
         {
-            return Questions.Find(x => x.Id == QuestionId.StartingQuestion);
+            return GetQuestionById(QuestionId.StartingQuestion);
+        }
+
+        public Question GetQuestionById(QuestionId id)
+        {
+            return Questions.Find(x => x.Id == id);
         }
     }
 }

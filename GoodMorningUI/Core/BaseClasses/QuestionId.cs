@@ -7,6 +7,7 @@ namespace GoodMorningUI.Core.BaseClasses
 {
     public enum QuestionId
     {
-        StartingQuestion
+        StartingQuestion,
+        FinalQuestion
     }
 }

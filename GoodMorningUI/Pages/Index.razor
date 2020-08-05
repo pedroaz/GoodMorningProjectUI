@@ -7,6 +7,6 @@
 <div class="answer-container">
 
     @foreach (var answer in Question.Answers) {
-        <button>@answer.Text</button>
+        <button @onclick=" (() => { ClickAnswerButton(answer); } )">@answer.Text</button>
     }
 </div>

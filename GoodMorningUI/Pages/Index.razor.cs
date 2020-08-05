@@ -22,5 +22,10 @@ namespace GoodMorningUI.Pages
             Question = NarrativeManager.GetFirstQuestion();
             return base.OnInitializedAsync();
         }
+
+        public void ClickAnswerButton(Answer answer)
+        {
+            Question = NarrativeManager.GetQuestionById(answer.NextQuestion);
+        }
     }
 }

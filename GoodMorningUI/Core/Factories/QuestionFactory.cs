@@ -12,6 +12,7 @@ namespace GoodMorningUI.Core.Factories
         {
             List<Question> questions = new List<Question>();
             questions.Add(StartingQuestion());
+            questions.Add(FinalQuestion());
             return questions;
         }
 
@@ -23,12 +24,23 @@ namespace GoodMorningUI.Core.Factories
                 new List<Answer>() {
                     new Answer(
                         "Yes",
-                        QuestionId.StartingQuestion
+                        QuestionId.FinalQuestion
                     ),
                     new Answer(
                         "No",
-                        QuestionId.StartingQuestion
+                        QuestionId.FinalQuestion
                     )
+                }
+            );
+        }
+
+        private Question FinalQuestion()
+        {
+            return new Question(
+                QuestionId.FinalQuestion,
+                "Thank you!",
+                new List<Answer>() {
+                    
                 }
             );
         }
