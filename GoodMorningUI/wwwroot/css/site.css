@@ -2,4 +2,33 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    
+}
+
+.page-top {
+    background-color: gray;
+    min-height: 5vh;
+    margin: 0px;
+}
+
+.page-main {
+    background-color: lightblue;
+    flex-grow: 1;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.question-container {
+    background-color: darkcyan;
+    min-height: 40vh;
+    display: flex;
+}
+
+.answer-container {
+    background-color: darkred;
+    min-height: 55vh;
 }
